@@ -20,9 +20,10 @@ var kl83YMapsInitializeCoordsWidget = function ( $, o ) {
         placemark = new ymaps.Placemark(coords, {}, {
             draggable: true
         });
-        placemark.events.add('dragend', function(){
+        placemark.geometry.events.add('change', function(){
             input.val(JSON.stringify(placemark.geometry._coordinates));
         });
         map.geoObjects.add(placemark);
+        rootEl.trigger('ymaps-ready', { map: map, placemark: placemark });
     });
 };
