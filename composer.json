@@ -1,15 +1,8 @@
 {
     "name": "kl83/yii2-ymaps",
-    "description": "Yii2 yandex maps input widget",
+    "description": "Yii2 Yandex Maps toolkit",
     "require": {
         "yiisoft/yii2": "^2.0.0"
-    },
-    "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.0",
-        "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1",
-        "codeception/specify": "~0.4.3",
-        "guzzlehttp/guzzle": ">=4.1.4 <7.0"
     },
     "license": "MIT",
     "authors": [
@@ -19,7 +12,7 @@
         }
     ],
     "autoload": {
-        "psr-4": { "kl83\\ymaps\\": "ymaps/" }
+        "psr-4": { "kl83\\ymaps\\": "src/" }
     },
     "repositories": [
         {
