@@ -21,7 +21,7 @@ to the require section of your composer.json file.
 
 ### CoordsInput
 
-``` php
+```php
 <?= $form->field($model, 'coords')->widget('kl83\ymaps\CoordsInput', [
   'options' => [], // Html-attributes of container
   'ymapsClientOptions' => [], // Yandex map JS settings
@@ -32,7 +32,7 @@ to the require section of your composer.json file.
 
 ### StreetInput
 
-``` php
+```php
 <?= $form->field($model, 'street')->widget('kl83\ymaps\StreetInput', [
   'options' => [], // Html-attributes
   'city' => '', // Search streets in specified city
@@ -44,14 +44,14 @@ to the require section of your composer.json file.
 ### CoordsInput
 
 Finds the specified address on the map, and moves the placemark to it.
-``` js
+```javascript
 $('.widget').coordsInput('search', 'Some address');
 ```
 
 ### StreetInput
 
 Get or set the city to search on.
-``` js
+```javascript
 $('.widget').streetInput('city'); // Get
 $('.widget').streetInput('city', 'Some city'); // Set
 ```
