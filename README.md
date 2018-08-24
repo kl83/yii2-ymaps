@@ -8,13 +8,17 @@ Widgets list:
 The preferred way to install this extension is through [composer](https://getcomposer.org/).
 
 Either run
+
 ```
 php composer.phar require kl83/yii2-ymaps @dev
 ```
+
 or add
+
 ```
 "kl83/yii2-ymaps": "@dev"
 ```
+
 to the require section of your composer.json file.
 
 ## Usage
@@ -44,6 +48,7 @@ to the require section of your composer.json file.
 ### CoordsInput
 
 Finds the specified address on the map, and moves the placemark to it.
+
 ```javascript
 $('.widget').coordsInput('search', 'Some address');
 ```
@@ -51,6 +56,7 @@ $('.widget').coordsInput('search', 'Some address');
 ### StreetInput
 
 Get or set the city to search on.
+
 ```javascript
 $('.widget').streetInput('city'); // Get
 $('.widget').streetInput('city', 'Some city'); // Set
