@@ -7,7 +7,7 @@ namespace kl83\ymaps;
  */
 class StreetInputAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/kl83/yii2-ymaps/web';
+    public $sourcePath = '@vendor/kl83/yii2-ymaps/src/web';
     public $js = ['js/street-input.js'];
     public $depends = [
         'yii\jui\JuiAsset',

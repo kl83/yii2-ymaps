@@ -2,14 +2,11 @@
 
 namespace kl83\ymaps;
 
-/**
- * {@inheritdoc}
- */
-class CoordsInputAsset extends \yii\web\AssetBundle
+class MapWidgetAsset extends \yii\web\AssetBundle
 {
     public $sourcePath = '@vendor/kl83/yii2-ymaps/src/web';
-    public $js = ['js/coords-input.js'];
-    public $css = ['css/coords-input.css'];
+    public $js = ['js/map-widget.js'];
+    public $css = ['css/map-widget.css'];
     public $depends = [
         'yii\web\JqueryAsset',
         'kl83\ymaps\YMapsAsset',
