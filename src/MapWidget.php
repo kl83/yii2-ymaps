@@ -12,7 +12,7 @@ use yii\base\Widget;
  * Exampe:
  * echo MapWidget::widget([
  *      'mapState' => [
- *          'coords' => [55.76, 37.64],
+ *          'center' => [55.76, 37.64],
  *      ],
  *      'placemarks' => [
  *          [
