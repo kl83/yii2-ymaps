@@ -26,6 +26,7 @@
                 );
                 map.geoObjects.add(placemark);
             }
+            $this.trigger('ymaps:ready', {map: map});
         });
     };
 
