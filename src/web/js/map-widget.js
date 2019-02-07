@@ -11,15 +11,15 @@
         }
     };
 
-    let methods = {};
+    var methods = {};
 
     methods.init = function (o) {
-        let $this = this;
+        var $this = this;
         ymaps.ready(function () {
-            let map = new ymaps.Map($this.get(0).id, o.state, o.options);
+            var map = new ymaps.Map($this.get(0).id, o.state, o.options);
             $this.data('map', map);
-            for (let i in o.placemarks) {
-                let placemark = new ymaps.Placemark(
+            for (var i in o.placemarks) {
+                var placemark = new ymaps.Placemark(
                     o.placemarks[i][0],
                     o.placemarks[i][1],
                     o.placemarks[i][2]

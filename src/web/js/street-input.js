@@ -1,24 +1,24 @@
 (function ($) {
 
-    let ymapsReady;
+    var ymapsReady;
 
     function source(request, response) {
-        let data = [];
+        var data = [];
         if (ymapsReady) {
-            let query = request.term;
-            let city = this.element.data('city');
+            var query = request.term;
+            var city = this.element.data('city');
             if (city) {
                 query = city + ', ' + query;
             }
-            let geocoder = ymaps.geocode(query, {
+            var geocoder = ymaps.geocode(query, {
                 results: 10
             });
             geocoder.then(
                 function (res) {
-                    let items = [];
+                    var items = [];
                     res.geoObjects.each(function (obj) {
-                        let kind = obj.properties.get('metaDataProperty.GeocoderMetaData.kind');
-                        let name = obj.properties.get('name');
+                        var kind = obj.properties.get('metaDataProperty.GeocoderMetaData.kind');
+                        var name = obj.properties.get('name');
                         if (kind === 'street' && name.toLowerCase().indexOf(request.term.toLowerCase()) >= 0) {
                             items.push(name);
                         }

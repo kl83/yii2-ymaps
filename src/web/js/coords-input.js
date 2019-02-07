@@ -3,7 +3,7 @@
     /**
      * Placemark drag event handler.
      */
-    let placemarkMove = function () {
+    var placemarkMove = function () {
         this.updateInputs(this.placemark.geometry._coordinates);
     };
 
@@ -32,8 +32,8 @@
      * @returns {ymaps.Map}
      */
     Widget.prototype.createMap = function () {
-        let mapElId = this.rootEl.find('.ymaps-map').attr('id');
-        let options = this.rootEl.data('map');
+        var mapElId = this.rootEl.find('.ymaps-map').attr('id');
+        var options = this.rootEl.data('map');
         options.center = this.coords;
         return new ymaps.Map(mapElId, options);
     };
@@ -43,7 +43,7 @@
      * @returns {ymaps.Placemark}
      */
     Widget.prototype.createPlacemark = function () {
-        let placemark = new ymaps.Placemark(
+        var placemark = new ymaps.Placemark(
             this.coords,
             this.rootEl.data('pm-prop'),
             this.rootEl.data('pm-opt')
@@ -63,14 +63,14 @@
     };
 
     $.fn.coordsInput = function (cmd, params) {
-        let widget = $(this).data('coords-input');
+        var widget = $(this).data('coords-input');
         if (cmd === 'search') {
-            let geocoder = ymaps.geocode(params, {
+            var geocoder = ymaps.geocode(params, {
                 results: 1
             });
             geocoder.then(
                 function (res) {
-                    let coords = res.geoObjects.get(0).geometry.getCoordinates();
+                    var coords = res.geoObjects.get(0).geometry.getCoordinates();
                     widget.placemark.geometry.setCoordinates(coords);
                     widget.map.panTo(coords);
                 }
